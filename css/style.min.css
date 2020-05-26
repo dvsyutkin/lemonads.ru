@@ -396,6 +396,30 @@ body {
   font-family: 'Roboto Thin', sans-serif;
 }
 
+.btn {
+  padding: 16px 69px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 2.4rem;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Roboto Regular', sans-serif;
+}
+
+.btn-green {
+  background: #19B03C;
+  color: #ffffff;
+}
+
+.btn-black {
+  background: #000000;
+  color: #ffffff;
+}
+
+.btn-white {
+  background: #FEFEFE;
+  color: #19B03C;
+}
+
 @media (max-width: 992px) {
   html {
     font-size: 9px;
@@ -577,4 +601,13 @@ body {
 .hero__text {
   font-size: 2.4rem;
   text-align: center;
+}
+
+.hero__btn-box {
+  margin-top: 11rem;
+  text-align: center;
+}
+
+.hero__btn-box button {
+  margin: 0 1.5rem;
 }
