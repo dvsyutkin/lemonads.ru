@@ -6,6 +6,7 @@
     &__info-menu
         display: flex
         justify-content: space-between
+        margin-bottom: 5.5rem
     &__counter-wrap
         display: flex
         align-items: center
@@ -27,15 +28,34 @@
             max-width: 155px
             +robL
             font-size: 1.4rem
+            line-height: 1.6rem
     &__menu
         &-list
             max-width: 250px
         &-item
-            margin-bottom: 1.4rem
+            padding: 0.7rem 0.5rem
             text-align: right
-            a
-                +robL
-                font-size: 1.8rem
-                text-transform: uppercase
-                text-decoration: none
-                color: #000000
+            transition: 0.3s
+            &:hover
+                background: rgba(233, 233, 233, 0.5)
+        &-link
+            +robL
+            font-size: 1.8rem
+            text-transform: uppercase
+            text-decoration: none
+            color: #000000
+            &_active
+                color: $green
+                +robB
+
+    &__example
+        &-wrap
+            display: flex
+            justify-content: space-between
+            align-items: center
+            flex-wrap: wrap
+        &-box
+            width: 24%
+            img
+                border: 1px solid red
+                width: 70%
