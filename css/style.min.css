@@ -396,6 +396,27 @@ body {
   font-family: 'Roboto Thin', sans-serif;
 }
 
+.section {
+  padding-top: 4rem;
+}
+
+.section__title {
+  margin-bottom: 3rem;
+  font-family: 'Roboto Thin', sans-serif;
+  font-size: 6.4rem;
+  text-transform: uppercase;
+}
+
+.section__title-center {
+  text-align: center;
+}
+
+.p {
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
 .btn {
   padding: 16px 69px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -610,4 +631,42 @@ body {
 
 .hero__btn-box button {
   margin: 0 1.5rem;
+}
+
+.works__desc-box {
+  padding-left: 5.5rem;
+}
+
+.works__info-box {
+  max-width: 850px;
+}
+
+.works__counter-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 2.3rem;
+  background: #E5E5E5;
+  border-radius: 5px;
+}
+
+.works__desc-text {
+  margin-bottom: 5rem;
+}
+
+.works__counter-nub {
+  font-family: 'Roboto Bold', sans-serif;
+  color: #19B03C;
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
+}
+
+.works__counter-nub small {
+  font-size: 1.4rem;
+}
+
+.works__counter-text {
+  max-width: 155px;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.4rem;
 }
