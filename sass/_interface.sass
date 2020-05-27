@@ -1,16 +1,35 @@
 html
-  font-size: 10px
+	font-size: 10px
 
-        
+body
+	font-size: 1.6rem
+	+robT
+
+.btn
+	padding: 16px 69px
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	font-size: 2.4rem
+	border-radius: 10px
+	border: none
+	+robR
+	&-green
+		background: $green
+		color: #ffffff
+	&-black
+		background: #000000
+		color: #ffffff
+	&-white
+		background: #FEFEFE
+		color: $green
 
 @media (max-width: 992px)
-  html
-    font-size: 9px
+	html
+		font-size: 9px
     
 @media (max-width: 768px)
-  html
-    font-size: 8px
+	html
+		font-size: 8px
 
 @media (max-width: 600px)
-  html
-    font-size: 7px
+	html
+		font-size: 7px

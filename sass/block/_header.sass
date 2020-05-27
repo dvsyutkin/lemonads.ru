@@ -1,0 +1,54 @@
+.header
+    position: fixed
+    height: 94px
+    top: 0
+    left: 0
+    width: 100%
+    background: #ffffff
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 1.3rem 0
+    &__query
+        padding-left: 6%
+        color: $green
+        font-size: 2.4rem
+    &__phone-menu
+        display: flex
+        align-items: center
+    &__phone-box
+        margin-right: 6.5rem
+        text-align: right
+        a
+            +robR
+            font-size: 1.8rem
+            color: #000000
+            text-decoration: none
+            strong
+                +robB
+    &__city-box
+        margin-bottom: 4px
+    &__city
+        display: inline-block
+        margin-left: 5px
+        font-size: 1.2rem
+        +robR
+        &:hover
+            cursor: pointer
+        &_active
+            +robB
+            color: $green
+
+// кнопка меню
+.btn-menu
+    padding: 0
+    background: transparent
+    border: none
+.line
+    display: block
+    height: 3px
+    width: 32px
+    background: $green
+    &-2
+        margin: 7px 0

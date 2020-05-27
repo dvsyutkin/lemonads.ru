@@ -356,55 +356,68 @@ textarea {
 }
 
 @font-face {
-  font-family: 'MR';
-  src: url("../fonts/Montserrat-Regular.eot");
-  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  font-family: 'Roboto Regular';
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Regular.svg#Roboto-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'MSB';
-  src: url("../fonts/Montserrat-SemiBold.eot");
-  src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.ttf") format("truetype"), url("../fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold") format("svg");
-  font-weight: 600;
+  font-family: 'Roboto Thin';
+  src: url("../fonts/Roboto-Thin.eot");
+  src: url("../fonts/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Thin.woff2") format("woff2"), url("../fonts/Roboto-Thin.woff") format("woff"), url("../fonts/Roboto-Thin.ttf") format("truetype"), url("../fonts/Roboto-Thin.svg#Roboto-Thin") format("svg");
+  font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'MB';
-  src: url("../fonts/Montserrat-Bold.eot");
-  src: url("../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.ttf") format("truetype"), url("../fonts/Montserrat-Bold.svg#Montserrat-Bold") format("svg");
+  font-family: 'Roboto Bold';
+  src: url("../fonts/Roboto-Bold.eot");
+  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype"), url("../fonts/Roboto-Bold.svg#Roboto-Bold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'MM';
-  src: url("../fonts/Montserrat-Medium.eot");
-  src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.ttf") format("truetype"), url("../fonts/Montserrat-Medium.svg#Montserrat-Medium") format("svg");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'MEB';
-  src: url("../fonts/Montserrat-ExtraBold.eot");
-  src: url("../fonts/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat-ExtraBold.ttf") format("truetype"), url("../fonts/Montserrat-ExtraBold.svg#Montserrat-ExtraBold") format("svg");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TT Norms Pro';
-  src: url("../fonts/TTNormsPro-Regular.eot");
-  src: url("../fonts/TTNormsPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNormsPro-Regular.woff2") format("woff2"), url("../fonts/TTNormsPro-Regular.woff") format("woff"), url("TTNormsPro-Regular.ttf") format("truetype"), url("../fonts/TTNormsPro-Regular.svg#TTNormsPro-Regular") format("svg");
-  font-weight: normal;
+  font-family: 'Roboto Light';
+  src: url("../fonts/Roboto-Light.eot");
+  src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-Light.svg#Roboto-Light") format("svg");
+  font-weight: 300;
   font-style: normal;
 }
 
 html {
   font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto Thin', sans-serif;
+}
+
+.btn {
+  padding: 16px 69px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 2.4rem;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Roboto Regular', sans-serif;
+}
+
+.btn-green {
+  background: #19B03C;
+  color: #ffffff;
+}
+
+.btn-black {
+  background: #000000;
+  color: #ffffff;
+}
+
+.btn-white {
+  background: #FEFEFE;
+  color: #19B03C;
 }
 
 @media (max-width: 992px) {
@@ -464,4 +477,137 @@ html {
     max-width: 100%;
     margin-right: 0;
   }
+}
+
+.header {
+  position: fixed;
+  height: 94px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 0;
+}
+
+.header__query {
+  padding-left: 6%;
+  color: #19B03C;
+  font-size: 2.4rem;
+}
+
+.header__phone-menu {
+  display: flex;
+  align-items: center;
+}
+
+.header__phone-box {
+  margin-right: 6.5rem;
+  text-align: right;
+}
+
+.header__phone-box a {
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 1.8rem;
+  color: #000000;
+  text-decoration: none;
+}
+
+.header__phone-box a strong {
+  font-family: 'Roboto Bold', sans-serif;
+}
+
+.header__city-box {
+  margin-bottom: 4px;
+}
+
+.header__city {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 1.2rem;
+  font-family: 'Roboto Regular', sans-serif;
+}
+
+.header__city:hover {
+  cursor: pointer;
+}
+
+.header__city_active {
+  font-family: 'Roboto Bold', sans-serif;
+  color: #19B03C;
+}
+
+.btn-menu {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.line {
+  display: block;
+  height: 3px;
+  width: 32px;
+  background: #19B03C;
+}
+
+.line-2 {
+  margin: 7px 0;
+}
+
+.hero {
+  margin-top: 94px;
+  padding-top: 9rem;
+  padding-bottom: 5.5rem;
+  background: #19B03C;
+  color: #ffffff;
+}
+
+.hero__title {
+  text-align: center;
+  font-family: 'Roboto Thin', sans-serif;
+  font-size: 6.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24%;
+  margin-top: 8rem;
+}
+
+.hero__box-img {
+  max-width: 65px;
+  margin-bottom: 10px;
+}
+
+.hero__box-img img {
+  width: 100%;
+}
+
+.hero__text {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.hero__btn-box {
+  margin-top: 11rem;
+  text-align: center;
+}
+
+.hero__btn-box button {
+  margin: 0 1.5rem;
 }
