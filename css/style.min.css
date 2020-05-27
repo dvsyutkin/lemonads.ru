@@ -641,6 +641,11 @@ body {
   max-width: 850px;
 }
 
+.works__info-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
 .works__counter-wrap {
   display: flex;
   align-items: center;
@@ -669,4 +674,21 @@ body {
   max-width: 155px;
   font-family: 'Roboto Light', sans-serif;
   font-size: 1.4rem;
+}
+
+.works__menu-list {
+  max-width: 250px;
+}
+
+.works__menu-item {
+  margin-bottom: 1.4rem;
+  text-align: right;
+}
+
+.works__menu-item a {
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
 }
