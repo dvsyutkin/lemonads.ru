@@ -1,6 +1,7 @@
 .review
     &__wrap
-        margin: 6rem
+        position: relative
+        margin: 6rem 0
     &-btn
         float: right
         padding: 0.9rem 3rem
@@ -11,10 +12,10 @@
         border: none
     &-box
         display: flex
-        justify-content: space-between
     &__man
         &-box
             min-width: 270px
+            margin-right: 10rem
     &__avatar
         width: 120px
         height: 120px
@@ -43,6 +44,24 @@
     &__text
         margin-bottom: 2rem
         &-box
+            position: relative
             max-width: 653px
+            &::before, &::after
+                position: absolute
+                +robL
+                font-size: 9.6rem
+                color: #434343
+                line-height: 5rem
+            &::before
+                content: '«'
+                top: -10px
+                left: -70px
+            &::after
+                content: '»'
+                bottom: 25px
+                right: -60px
+                
+        
+
 
     

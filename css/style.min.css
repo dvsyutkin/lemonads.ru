@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -820,7 +821,8 @@ body {
 }
 
 .review__wrap {
-  margin: 6rem;
+  position: relative;
+  margin: 6rem 0;
 }
 
 .review-btn {
@@ -835,11 +837,11 @@ body {
 
 .review-box {
   display: flex;
-  justify-content: space-between;
 }
 
 .review__man-box {
   min-width: 270px;
+  margin-right: 10rem;
 }
 
 .review__avatar {
@@ -886,10 +888,34 @@ body {
 .review__text {
   margin-bottom: 2rem;
 }
-<<<<<<< Updated upstream
 
 .review__text-box {
+  position: relative;
   max-width: 653px;
+}
+
+.review__text-box::before, .review__text-box::after {
+  position: absolute;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 9.6rem;
+  color: #434343;
+  line-height: 5rem;
+}
+
+.review__text-box::before {
+  content: '«';
+  top: -10px;
+  left: -70px;
+}
+
+.review__text-box::after {
+  content: '»';
+  bottom: 25px;
+  right: -60px;
+}
+
+.slider__wrap {
+  margin-bottom: 9rem;
 }
 
 .slider__wrap-container {
@@ -897,13 +923,15 @@ body {
 }
 
 .slider__box {
-  border: 1px solid red;
   display: flex;
+  min-height: 80px;
   align-items: center;
   justify-content: center;
 }
 
 .slider-btn {
+  position: absolute;
+  top: 50%;
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -912,14 +940,13 @@ body {
 }
 
 .slider-next {
-  transform: rotate(180deg);
+  left: -90px;
+  transform: translateY(-50%);
 }
 
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+.slider-prev {
+  right: -90px;
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .contacts {
@@ -1097,5 +1124,3 @@ body {
 .footer__email:hover {
   text-decoration: underline;
 }
-=======
->>>>>>> Stashed changes

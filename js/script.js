@@ -1,7 +1,23 @@
 window.addEventListener('DOMContentLoaded', function () {
+
+    // слайдер компаний
+    const sliderReview = $('.review__wrap.owl-carousel');
+    sliderReview.owlCarousel($.extend({}, {
+        nav: false,
+        dots: false,
+        loop: true,
+        margin: 0,
+        items: 1,
+        // autoWidth: true
+    }));
+
+
+    // слайдер компаний
     const sliderCompany = $('.slider-company .owl-carousel');
     sliderCompany.owlCarousel($.extend({}, {
         nav: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
         dots: false,
         margin: 50,
         loop: true,
@@ -22,11 +38,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
     }));
 
-    $('.news__arrow-box .news__arrow-prev').click(function () {
-        sliderTwo.trigger('prev.owl.carousel');
+    $('.slider-btn.slider-prev').click(function () {
+        sliderCompany.trigger('prev.owl.carousel');
     });
-    $('.news__arrow-box .news__arrow-next').click(function () {
-        sliderTwo.trigger('next.owl.carousel');
+    $('.slider-btn.slider-next').click(function () {
+        sliderCompany.trigger('next.owl.carousel');
     });
 
 
