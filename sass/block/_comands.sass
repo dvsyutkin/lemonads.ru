@@ -1,0 +1,48 @@
+.comands
+    background: rgba(233, 233, 233, 0.3)
+    &__wrap
+        display: flex
+    &__person, &__people
+        width: 50%
+    &__person
+        &-box
+            display: flex
+            margin-bottom: 1.2rem
+            align-items: center
+        &-name
+            margin-bottom: 2.4rem
+            +robL
+            font-size: 4.8rem
+        &-status
+            font-size: 2.4rem
+            text-transform: uppercase
+        &-text
+            margin-bottom: 2rem
+    &__people
+        display: flex
+        flex-wrap: wrap
+        &-box
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 30%
+            margin-bottom: 2rem
+        &-img
+            max-width: 90px
+            img
+                width: 100%
+                filter: grayscale(100%)
+                transition: 0.9s
+                &:hover
+                    filter: none
+                    cursor: pointer
+        &-name
+            margin-top: 1rem
+            margin-bottom: 1rem
+            +robL
+            font-size: 1.8rem
+            text-align: center
+        &-status
+            +robL
+            font-size: 1.3rem
+            text-transform: uppercase

@@ -6,13 +6,16 @@ body
 	+robT
 .section
 	padding-top: 4rem
+	padding-bottom: 6rem
 	&__title
 		margin-bottom: 3rem
 		+robT
 		font-size: 6.4rem
 		text-transform: uppercase
-		&-center
+		&_center
 			text-align: center
+.clear
+	clear: both
 .p
 	+robL
 	font-size: 1.6rem
@@ -35,6 +38,24 @@ body
 	&-white
 		background: #FEFEFE
 		color: $green
+
+.btn-up
+	position: fixed
+	display: flex
+	justify-content: center
+	align-items: center
+	bottom: 35px
+	right: 35px
+	width: 65px
+	height: 65px
+	background: #C4C4C4
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	border: none
+	border-radius: 50%
+	transition: 0.5s
+	&:hover
+		bottom: 40px
+		cursor: pointer
 
 @media (max-width: 992px)
 	html

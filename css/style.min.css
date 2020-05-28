@@ -398,6 +398,7 @@ body {
 
 .section {
   padding-top: 4rem;
+  padding-bottom: 6rem;
 }
 
 .section__title {
@@ -407,8 +408,12 @@ body {
   text-transform: uppercase;
 }
 
-.section__title-center {
+.section__title_center {
   text-align: center;
+}
+
+.clear {
+  clear: both;
 }
 
 .p {
@@ -439,6 +444,27 @@ body {
 .btn-white {
   background: #FEFEFE;
   color: #19B03C;
+}
+
+.btn-up {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 35px;
+  right: 35px;
+  width: 65px;
+  height: 65px;
+  background: #C4C4C4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.btn-up:hover {
+  bottom: 40px;
+  cursor: pointer;
 }
 
 @media (max-width: 992px) {
@@ -501,6 +527,7 @@ body {
 }
 
 .header {
+  z-index: 100;
   position: fixed;
   height: 94px;
   top: 0;
@@ -714,9 +741,358 @@ body {
 
 .works__example-box {
   width: 24%;
+  text-align: center;
 }
 
-.works__example-box img {
+.comands {
+  background: rgba(233, 233, 233, 0.3);
+}
+
+.comands__wrap {
+  display: flex;
+}
+
+.comands__person, .comands__people {
+  width: 50%;
+}
+
+.comands__person-box {
+  display: flex;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+
+.comands__person-name {
+  margin-bottom: 2.4rem;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 4.8rem;
+}
+
+.comands__person-status {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.comands__person-text {
+  margin-bottom: 2rem;
+}
+
+.comands__people {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comands__people-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  margin-bottom: 2rem;
+}
+
+.comands__people-img {
+  max-width: 90px;
+}
+
+.comands__people-img img {
+  width: 100%;
+  filter: grayscale(100%);
+  transition: 0.9s;
+}
+
+.comands__people-img img:hover {
+  filter: none;
+  cursor: pointer;
+}
+
+.comands__people-name {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.comands__people-status {
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.review__wrap {
+  margin: 6rem;
+}
+
+.review-btn {
+  float: right;
+  padding: 0.9rem 3rem;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.4rem;
+  background: #E9E9E9;
+  border-radius: 5px;
+  border: none;
+}
+
+.review-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review__man-box {
+  min-width: 270px;
+}
+
+.review__avatar {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 2.2rem;
+  border-radius: 50%;
+}
+
+.review__avatar img {
+  width: 100%;
+}
+
+.review__name {
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 3.6rem;
+  margin-bottom: 1.7rem;
+}
+
+.review__company, .review__city {
+  font-size: 1.8rem;
+}
+
+.review__company {
+  margin-bottom: 0.8rem;
+}
+
+.review__city {
+  margin-bottom: 3rem;
+}
+
+.review__project {
+  margin-bottom: 1.8rem;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 2.4rem;
+}
+
+.review__item {
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.review__text {
+  margin-bottom: 2rem;
+}
+
+.review__text-box {
+  max-width: 653px;
+}
+
+.slider__wrap-container {
+  position: relative;
+}
+
+.slider__box {
   border: 1px solid red;
-  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(196, 196, 196, 0.5);
+}
+
+.slider-next {
+  transform: rotate(180deg);
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.contacts {
+  background: rgba(233, 233, 233, 0.3);
+}
+
+.contacts__wrap {
+  display: flex;
+  margin-top: 7.5rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.contacts__city-box {
+  margin-bottom: 2.2rem;
+  margin-right: 2rem;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.contacts__city_active {
+  font-family: 'Roboto Regular', sans-serif;
+}
+
+.contacts__address, .contacts__phone {
+  font-family: 'Roboto Regular', sans-serif;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  color: #000000;
+}
+
+.contacts__address {
+  max-width: 250px;
+  margin-bottom: 0.3rem;
+  line-height: 2.8rem;
+}
+
+.contacts__phone {
+  text-decoration: none;
+}
+
+.contacts__list {
+  display: flex;
+  margin-top: 4rem;
+}
+
+.contacts__item {
+  margin-right: 1.5rem;
+}
+
+.footer {
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  background: #19B03C;
+  color: #ffffff;
+}
+
+.footer__left {
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.4rem;
+}
+
+.footer__subtitle {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__first {
+  display: flex;
+}
+
+.footer__second {
+  text-align: right;
+}
+
+.footer__left {
+  margin-right: 6.5rem;
+}
+
+.footer__nav-box {
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer__service-box {
+  display: flex;
+}
+
+.footer__service-title {
+  font-family: 'Roboto Bold', sans-serif;
+  margin-bottom: 1.4rem;
+}
+
+.footer__service-list {
+  margin-right: 4.4rem;
+}
+
+.footer__service-item {
+  margin-bottom: 1.4rem;
+}
+
+.footer__service-item a {
+  font-family: 'Roboto Light', sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+
+.footer__service-item a:hover {
+  text-decoration: underline;
+}
+
+.footer__nav-list {
+  margin-top: 2.5rem;
+}
+
+.footer__nav-item {
+  margin-bottom: 1.4rem;
+}
+
+.footer__nav-item a {
+  font-family: 'Roboto Bold', sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer__nav-item a:hover {
+  text-decoration: underline;
+}
+
+.footer__soc-box a {
+  margin-left: 1rem;
+}
+
+.footer__address, .footer__phone {
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.footer__address {
+  margin-top: 2.2rem;
+  line-height: 2.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer__phone {
+  display: block;
+  margin-bottom: 0.8rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer__phone:hover {
+  text-decoration: underline;
+}
+
+.footer__email {
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer__email:hover {
+  text-decoration: underline;
 }
