@@ -18,6 +18,11 @@
             text-transform: uppercase
         &-text
             margin-bottom: 2rem
+        &-img
+            max-width: 205px
+            img
+                width: 100%
+
     &__people
         display: flex
         flex-wrap: wrap
@@ -29,13 +34,7 @@
             margin-bottom: 2rem
         &-img
             max-width: 90px
-            img
-                width: 100%
-                filter: grayscale(100%)
-                transition: 0.9s
-                &:hover
-                    filter: none
-                    cursor: pointer
+            min-height: 150px
         &-name
             margin-top: 1rem
             margin-bottom: 1rem
@@ -46,3 +45,15 @@
             +robL
             font-size: 1.3rem
             text-transform: uppercase
+    &-img
+        width: 100%
+        filter: grayscale(100%)
+        -webkit-filter: grayscale(100%)
+        transition: 0.9s
+        &:hover
+            filter: none
+            -webkit-filter: none
+            cursor: pointer
+    &__people-active
+        filter: none
+        -webkit-filter: none

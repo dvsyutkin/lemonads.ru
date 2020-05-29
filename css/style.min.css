@@ -447,6 +447,35 @@ body {
   color: #19B03C;
 }
 
+.btn-submit {
+  max-width: 255px;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .btn-up {
   position: fixed;
   display: flex;
@@ -608,6 +637,12 @@ body {
   margin: 7px 0;
 }
 
+@media (max-width: 720px) {
+  .header__query {
+    display: none;
+  }
+}
+
 .hero {
   margin-top: 94px;
   padding-top: 9rem;
@@ -745,6 +780,24 @@ body {
   text-align: center;
 }
 
+@media (max-width: 910px) {
+  .works__example-box {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 700px) {
+  .works__example-box {
+    width: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .works__example-box {
+    width: 90%;
+  }
+}
+
 .comands {
   background: rgba(233, 233, 233, 0.3);
 }
@@ -778,6 +831,14 @@ body {
   margin-bottom: 2rem;
 }
 
+.comands__person-img {
+  max-width: 205px;
+}
+
+.comands__person-img img {
+  width: 100%;
+}
+
 .comands__people {
   display: flex;
   flex-wrap: wrap;
@@ -793,17 +854,7 @@ body {
 
 .comands__people-img {
   max-width: 90px;
-}
-
-.comands__people-img img {
-  width: 100%;
-  filter: grayscale(100%);
-  transition: 0.9s;
-}
-
-.comands__people-img img:hover {
-  filter: none;
-  cursor: pointer;
+  min-height: 150px;
 }
 
 .comands__people-name {
@@ -818,6 +869,24 @@ body {
   font-family: 'Roboto Light', sans-serif;
   font-size: 1.3rem;
   text-transform: uppercase;
+}
+
+.comands-img {
+  width: 100%;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition: 0.9s;
+}
+
+.comands-img:hover {
+  filter: none;
+  -webkit-filter: none;
+  cursor: pointer;
+}
+
+.comands__people-active {
+  filter: none;
+  -webkit-filter: none;
 }
 
 .review__wrap {
@@ -914,6 +983,36 @@ body {
   right: -60px;
 }
 
+@media (max-width: 1122px) {
+  .review__man-box {
+    margin-right: 3rem;
+  }
+  .review__text {
+    margin-bottom: 2rem;
+  }
+  .review__text-box::before {
+    left: -10px;
+  }
+  .review__text-box::after {
+    right: -10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .review__man-box {
+    margin-right: 1rem;
+  }
+  .review__text {
+    margin-bottom: 2rem;
+  }
+  .review__text-box::before {
+    display: none;
+  }
+  .review__text-box::after {
+    display: none;
+  }
+}
+
 .slider__wrap {
   margin-bottom: 9rem;
 }
@@ -927,6 +1026,16 @@ body {
   min-height: 80px;
   align-items: center;
   justify-content: center;
+}
+
+.slider__box img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition: 0.5s;
+}
+
+.slider__box img:hover {
+  filter: none;
 }
 
 .slider-btn {
@@ -949,11 +1058,32 @@ body {
   transform: translateY(-50%) rotate(180deg);
 }
 
+@media (max-width: 1266px) {
+  .slider-btn {
+    top: 140%;
+    width: 34px;
+    height: 34px;
+  }
+  .slider-btn img {
+    width: 40%;
+  }
+  .slider-next {
+    left: 45%;
+  }
+  .slider-prev {
+    right: 45%;
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
 .contacts {
+  position: relative;
   background: rgba(233, 233, 233, 0.3);
 }
 
 .contacts__wrap {
+  position: relative;
+  z-index: 10;
   display: flex;
   margin-top: 7.5rem;
   align-items: flex-end;
@@ -989,12 +1119,26 @@ body {
 }
 
 .contacts__list {
+  z-index: 10;
   display: flex;
   margin-top: 4rem;
 }
 
 .contacts__item {
   margin-right: 1.5rem;
+}
+
+.contacts__map {
+  z-index: 5;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  height: 300px;
+}
+
+.contacts-city {
+  cursor: pointer;
 }
 
 .footer {
@@ -1123,4 +1267,161 @@ body {
 
 .footer__email:hover {
   text-decoration: underline;
+}
+
+.popup__overlay {
+  display: none;
+  z-index: 9999;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.75);
+  transition: 0.6s;
+}
+
+.popup__order-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 6.5rem;
+  padding-bottom: 2.8rem;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+}
+
+.popup__order-title {
+  margin-bottom: 4rem;
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.popup__order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__order-input {
+  margin-bottom: 4.8rem;
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 2.4rem;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #E5E5E5;
+  text-align: center;
+  color: #434343;
+  border-radius: 5px;
+}
+
+.popup__order-input:placeholder {
+  color: #434343;
+}
+
+.popup__order-files {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.popup-form-btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+}
+
+.popup__text, .popup__politic {
+  max-width: 310px;
+  margin: auto;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  text-align: center;
+  color: #000000;
+}
+
+.popup__politic::visited {
+  color: #000000;
+}
+
+.popup__email {
+  margin-bottom: 2.5rem;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-icon {
+  display: inline-block;
+  margin-right: 2.3rem;
+  cursor: pointer;
+}
+
+.label-file {
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav__list {
+  margin-top: 4rem;
+}
+
+.nav__item {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.nav__item a {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  font-family: 'Roboto Thin', sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.nav__item a:hover {
+  text-decoration: underline;
+}
+
+.popup__menu {
+  display: none;
+  z-index: 9999;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.75);
+  transition: 0.6s;
+}
+
+.popup__menu-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 4.5rem 10.5rem;
+  padding-bottom: 2.8rem;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #19B03C;
 }

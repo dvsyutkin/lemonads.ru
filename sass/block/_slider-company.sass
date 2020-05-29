@@ -8,6 +8,13 @@
         min-height: 80px
         align-items: center
         justify-content: center
+        img
+            filter: grayscale(100%)
+            -webkit-filter: grayscale(100%)
+            // -webkit-backdrop-filter: grayscale(100%)
+            transition: 0.5s
+            &:hover
+                filter: none
 .slider-btn
     position: absolute
     top: 50%
@@ -22,5 +29,17 @@
 .slider-prev
     right: -90px
     transform: translateY(-50%) rotate(180deg)
-.slider-btn
-    
+
+
+@media (max-width: 1266px)
+    .slider-btn
+        top: 140%
+        width: 34px
+        height: 34px
+        img
+            width: 40%
+    .slider-next
+        left: 45%
+    .slider-prev
+        right: 45%
+        transform: translateY(-50%) rotate(180deg)
