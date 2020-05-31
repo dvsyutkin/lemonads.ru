@@ -28,6 +28,8 @@
             text-decoration: none
             strong
                 +robB
+        &_mob
+            display: none
     &__city-box
         margin-bottom: 4px
     &__city
@@ -58,3 +60,14 @@
     .header
         &__query
             display: none
+
+@media (max-width: 600px)
+    .header__logo-box
+        width: 120px
+        img
+            width: 100%
+    .header__phone-box
+        margin-right: 1.2rem
+    .header
+        height: 55px
+    

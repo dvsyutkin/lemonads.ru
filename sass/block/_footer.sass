@@ -16,8 +16,10 @@
     &__wrap
         display: flex
         justify-content: space-between
+        flex-wrap: wrap
     &__first
         display: flex
+        flex-wrap: wrap
     &__second
         text-align: right
     &__left
@@ -79,3 +81,29 @@
         text-decoration: none
         &:hover
             text-decoration: underline
+
+@media ( max-width: 892px)
+    .footer
+        &__second
+            text-align: left
+            a
+                margin-left: 0
+                margin-right: 1rem
+
+@media ( max-width: 768px)
+    .footer
+        &__logo-box
+            width: 180px
+            img
+                width: 100%
+    
+@media ( max-width: 600px)
+    .footer
+        &__left
+            margin-bottom: 2rem
+    
+@media ( max-width: 350px)
+    .footer
+        &__left
+            margin-bottom: 2rem
+    

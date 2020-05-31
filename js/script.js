@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 items: 1,
             },
             720: {
-                items: 2
+                items: 3
             },
             960: {
                 items: 5
@@ -64,60 +64,70 @@ window.addEventListener('DOMContentLoaded', function () {
         tabs[i].classList.add(styleActive);
     }
 
-    hideTabContent(tabsContentHead, tabsCityHead, 'header__city_active');
-    showTabContent(tabsContentHead, tabsCityHead, 'header__city_active');
+    if (tabsParentHead != null) {
+        hideTabContent(tabsContentHead, tabsCityHead, 'header__city_active');
+        showTabContent(tabsContentHead, tabsCityHead, 'header__city_active');
 
-    tabsParentHead.addEventListener('click', (event) => {
-        const target = event.target;
-        if (target && target.classList.contains('header__city')) {
-            tabsCityHead.forEach((item, i) => {
-                if(target == item) {
-                    hideTabContent(tabsContentHead, tabsCityHead, 'header__city_active');
-                    showTabContent(tabsContentHead, tabsCityHead, 'header__city_active', i);
-                }
-            });
-        }
-    });
+        tabsParentHead.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target && target.classList.contains('header__city')) {
+                tabsCityHead.forEach((item, i) => {
+                    if(target == item) {
+                        hideTabContent(tabsContentHead, tabsCityHead, 'header__city_active');
+                        showTabContent(tabsContentHead, tabsCityHead, 'header__city_active', i);
+                    }
+                });
+            }
+        });
+    }
+    
+
 
     // табы Команда
     const   tabsComands = document.querySelectorAll('.comands__people-img img'),
             tabsContentComands = document.querySelectorAll('.comands__person'),
             tabsParentComands = document.querySelector('.comands__people');
 
-    hideTabContent(tabsContentComands, tabsComands, 'comands__people-active');
-    showTabContent(tabsContentComands, tabsComands, 'comands__people-active', 0);
+    if (tabsParentComands != null) {
+        hideTabContent(tabsContentComands, tabsComands, 'comands__people-active');
+        showTabContent(tabsContentComands, tabsComands, 'comands__people-active', 0);
+    
+        tabsParentComands.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target && target.classList.contains('comands-img')) {
+                tabsComands.forEach((item, i) => {
+                    if(target == item) {
+                        hideTabContent(tabsContentComands, tabsComands, 'comands__people-active');
+                        showTabContent(tabsContentComands, tabsComands, 'comands__people-active', i);
+                    }
+                });
+            }
+        });
+    }
 
-    tabsParentComands.addEventListener('click', (event) => {
-        const target = event.target;
-        if (target && target.classList.contains('comands-img')) {
-            tabsComands.forEach((item, i) => {
-                if(target == item) {
-                    hideTabContent(tabsContentComands, tabsComands, 'comands__people-active');
-                    showTabContent(tabsContentComands, tabsComands, 'comands__people-active', i);
-                }
-            });
-        }
-    });
 
     // табы контакты
     const   tabsContact = document.querySelectorAll('.contacts-city'),
             tabsContentContact = document.querySelectorAll('.contacts__tabs-content'),
             tabsParentContact = document.querySelector('.contacts__city-box');
-
-    hideTabContent(tabsContentContact, tabsContact, 'contacts__city_active');
-    showTabContent(tabsContentContact, tabsContact, 'contacts__city_active', 0);
-        
-    tabsParentContact.addEventListener('click', (event) => {
-        const target = event.target;
-        if (target && target.classList.contains('contacts-city')) {
-            tabsContact.forEach((item, i) => {
-                if(target == item) {
-                    hideTabContent(tabsContentContact, tabsContact, 'contacts__city_active');
-                    showTabContent(tabsContentContact, tabsContact, 'contacts__city_active', i);
-                }
-            });
-        }
-    });
+    
+    if (tabsParentContact != null) {
+        hideTabContent(tabsContentContact, tabsContact, 'contacts__city_active');
+        showTabContent(tabsContentContact, tabsContact, 'contacts__city_active', 0);
+            
+        tabsParentContact.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target && target.classList.contains('contacts-city')) {
+                tabsContact.forEach((item, i) => {
+                    if(target == item) {
+                        hideTabContent(tabsContentContact, tabsContact, 'contacts__city_active');
+                        showTabContent(tabsContentContact, tabsContact, 'contacts__city_active', i);
+                    }
+                });
+            }
+        });
+    }
+    
 
     // кнопка наверх
     const scrollBtn = document.querySelector('.btn-up');
@@ -169,6 +179,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			popupMenu.style.display = 'none';
 		}
     });
+
     // Закрытие всплывающих окон
     const closeForm = document.querySelectorAll('.popup-form-btn-close');
     closeForm.forEach(element => {
@@ -184,10 +195,7 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
-    
-
-
-
+// выпадающий список
+    $('.works__menu_mob').select2();
 });
         

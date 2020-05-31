@@ -9,6 +9,7 @@
         margin-bottom: 5.5rem
     &__counter-wrap
         display: flex
+        flex-wrap: wrap
         align-items: center
         justify-content: space-between
         padding: 1.3rem 2.3rem
@@ -38,6 +39,9 @@
             transition: 0.3s
             &:hover
                 background: rgba(233, 233, 233, 0.5)
+        &-form
+            display: none
+            margin: 2rem auto 0
         &-link
             +robL
             font-size: 1.8rem
@@ -58,20 +62,47 @@
             width: 24%
             text-align: center
 
+// стилизация выпадающего списка
+.select2-container--default .select2-selection--single
+    min-width: 150px
+    background: $green
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+    border-color: transparent transparent #ffffff transparent
+.select2-container--default .select2-selection--single .select2-selection__arrow b
+    border-color: #ffffff transparent transparent transparent
+.select2-container--default .select2-selection--single .select2-selection__rendered
+    color: #ffffff
+
 @media (max-width: 910px)
     .works
         &__example
             &-box
                 width: 33.33%
+        &__desc-box
+            padding-left: 0
+        &__menu-box
+            margin: auto
+        &__info-menu
+            flex-wrap: wrap
+        &__menu-list
+            display: none
+        &__menu-form
+            display: block
 
 @media (max-width: 700px)
     .works
         &__example
             &-box
                 width: 50%
+        &__counter
+            &-box
+                width: 50%
+                margin-bottom: 2rem
 
 @media (max-width: 450px)
     .works
         &__example
             &-box
-                width: 90%
+                width: 50%
+                img
+                    width: 60%

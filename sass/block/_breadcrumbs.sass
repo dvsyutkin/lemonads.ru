@@ -1,0 +1,31 @@
+.breadcrumbs
+    &-box
+        margin-top: 124px
+    &__list
+        display: flex
+    &__item
+        margin-right: 5px
+        font-size: 1.8rem
+        color: #434343
+        a
+            +robL
+            letter-spacing: 0.05em
+            font-size: 1.8rem
+            text-transform: uppercase
+            color: #434343
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+        span
+            +robB
+            color: $green
+            font-size: 1.8rem
+            text-transform: uppercase
+
+@media ( max-width: 600px )
+    .breadcrumbs
+        &-box
+            margin-top: 84px
+        &__item
+            margin-right: 2px
+    

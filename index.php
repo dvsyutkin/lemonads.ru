@@ -1,3 +1,4 @@
+<?php include 'header.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
     <title>Lemonads</title>
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link href="css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -147,10 +149,22 @@
                             <li class="works__menu-item"><a href="#" class="works__menu-link">Сайт/продвижение</a></li>
                             <li class="works__menu-item"><a href="#" class="works__menu-link">SMM</a></li>
                             <li class="works__menu-item"><a href="#" class="works__menu-link">Дизайн рекламы</a></li>
-                            <li class="works__menu-item"><a href="#" class="works__menu-link">Дизайн рекламы</a></li>
                             <li class="works__menu-item"><a href="#" class="works__menu-link">Этикетка/упаковка</a></li>
                             <li class="works__menu-item"><a href="#" class="works__menu-link">предметная и Food съёмка</a></li>
                         </ul>
+                        <form class="works__menu-form" action="">
+                            <select class="works__menu_mob" name="direction-list" id="">
+                                <option value="">Нейминг и логотипы</option>
+                                <option value="">Видеоролик</option>
+                                <option value="">Звуковая реклама</option>
+                                <option value="">Сайт/продвижение</option>
+                                <option value="">SMM</option>
+                                <option value="">Дизайн рекламы</option>
+                                <option value="">Этикетка/упаковка</option>
+                                <option value="">Предметная и Food съёмка</option>
+                                
+                            </select>
+                        </form>
                     </div>
                 </div>
                 <div class="works__example-wrap">
@@ -282,7 +296,7 @@
                     <div class="comands__person">
                         <div class="comands__person-box">
                             <div class="comands__person-img">
-                                <img src="images/sergei.png" alt="">
+                                <img src="images/djedai.png" alt="">
                             </div>
                             <div class="comands__person-desc">
                                 <div class="comands__person-name">Дмитрий Кислицын</div>
@@ -392,7 +406,7 @@
 
                         <div class="comands__people-box">
                             <div class="comands__people-img">
-                                <img class="comands-img" src="images/sergei.png" alt="">
+                                <img class="comands-img" src="images/djedai.png" alt="">
                             </div>
                             <div class="comands__people-name">Дмитрий<br>Кислицын</div>
                             <div class="comands__people-status">сайты и продвижение</div>
@@ -692,11 +706,13 @@
         </div>
     </div>
     <!-- /.popup__overlay -->
-
+    
+    
     <!-- Подключение Jquery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <!-- owl -->
     <script src="js/owl.carousel.min.js"></script>
+    <script src="js/select2.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
