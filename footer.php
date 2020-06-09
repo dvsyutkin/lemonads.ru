@@ -5,9 +5,9 @@
             <div class="footer__wrap">
                 <div class="footer__first">
     
-                    <div class="footer__left">
+                    <div class="wow animate__animated animate__slideInLeft footer__left">
                         <div class="footer__logo-box">
-                            <a href="#"><img src="images/logo-footer.svg" alt=""></a>
+                            <a href="index.php"><img src="images/logo-footer.svg" alt=""></a>
                         </div>
                         <h3 class="footer__subtitle">Рабочие рекламные решения</h3>
                         <div class="footer__ur-date">
@@ -19,8 +19,8 @@
                         </div>
                     </div>
                     <div class="footer__nav-box">
-                        <div class="footer__service-title">Услуги</div>
-                        <div class="footer__service-box">
+                        <div class="wow animate__animated animate__fadeIn footer__service-title">Услуги</div>
+                        <div class="wow animate__animated animate__fadeIn footer__service-box">
                             <ul class="footer__service-list">
                                 <li class="footer__service-item"><a href="#">Нейминг и логотипы</a></li>
                                 <li class="footer__service-item"><a href="#">Видеоролик</a></li>
@@ -34,7 +34,7 @@
                                 <li class="footer__service-item"><a href="#">предметная и Food съёмка</a></li>
                             </ul>
                         </div>
-                        <ul class="footer__nav-list">
+                        <ul class="wow animate__animated animate__fadeInUp footer__nav-list">
                             <li class="footer__nav-item"><a href="#">Команда</a></li>
                             <li class="footer__nav-item"><a href="#">Отзывы</a></li>
                             <li class="footer__nav-item"><a href="#">Контакты</a></li>
@@ -43,7 +43,7 @@
     
                 </div>
                 <!-- /.footer__first -->
-                <div class="footer__second">
+                <div class="wow animate__animated animate__slideInRight footer__second">
                     <div class="footer__soc-box">
                         <a href="#"><img src="images/Vector-1.svg" alt=""></a>
                         <a href="#"><img src="images/foot-insta.svg" alt=""></a>
@@ -72,12 +72,12 @@
             <form action="#" class="popup__order-form">
                 <input class="btn popup__order-input" type="text" name="name" id="" required placeholder="Ваше имя">
                 <input class="btn popup__order-input" type="tel" name="phone" id="" required placeholder="Телефон">
-                <input class="btn popup__order-input popup__email" type="email" name="email" id="" required placeholder="Электронная почта">
+                <input class="btn popup__order-input" type="email" name="email" id="" required placeholder="Электронная почта">
+                <textarea class="btn popup__order-input popup__order-textarea" name="msg" id="">Ваш комментарий</textarea>
                 <input type="file" name="file" id="file" class="inputfile"/>
                 <div class="popup__file-box">
                     <img class="file-icon" src="images/file-icon.svg" alt=""><label class="label-file" for="file">Прикрепить файл</label>
                 </div>
-
 
                 <button class="btn btn-black btn-submit" type="submit">Отправить</button>
 
@@ -90,13 +90,48 @@
     </div>
     <!-- /.popup__overlay -->
 
+    <div class="popup__request">
+        <div class="popup__order-box">
+            <div class="popup__order-title">Заполните форму</div>
+            <form action="#" class="popup__order-form">
+                <input class="btn popup__order-input" type="text" name="name" id="" required placeholder="Ваше имя">
+                <input class="btn popup__order-input" type="tel" name="phone" id="" required placeholder="Телефон">
+                <input class="btn popup__order-input" type="email" name="email" id="" required placeholder="Электронная почта">
+                
+                <select class="popup__select" name="" id="">
+                    <option value="Нейминг и логотипы">Нейминг и логотипы</option>
+                    <option value="Видеоролик">Видеоролик</option>
+                    <option value="Звуковая реклама">Звуковая реклама</option>
+                    <option value="Сайт/продвижение">Сайт/продвижение</option>
+                    <option value="SMM">SMM</option>
+                    <option value="Дизайн рекламы">Дизайн рекламы</option>
+                    <option value="Этикетка/упаковка">Этикетка/упаковка</option>
+                    <option value="Предметная и Food съёмка">Предметная и Food съёмка</option>
+                    <option value="Другое/комплекс услуг">Другое/комплекс услуг</option>
+                </select>
+                <input type="file" name="file" id="file" class="inputfile"/>
+                <div class="popup__file-box">
+                    <img class="file-icon" src="images/file-icon.svg" alt=""><label class="label-file" for="file">Прикрепить файл</label>
+                </div>
+
+                <button class="btn btn-black btn-submit" type="submit">Отправить</button>
+
+                <p class="popup__text">Нажимая кнопку «Отправить» вы соглашаетесь
+                    <a href="#" class="popup__politic" target="_blank">с политикой сайта по персональным данным.</a></p>
+
+                <button class="popup-form-btn-close"><img src="images/close-btn-black.svg" alt=""></button>
+            </form>
+        </div>
+    </div>
+    <!-- /.popup__request -->
+
     <div class="popup__menu">
         <div class="popup__menu-box">
             <nav class="nav-box">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#">Услуги</a></li>
-                    <li class="nav__item"><a href="#">Команда</a></li>
-                    <li class="nav__item"><a href="#">Отзывы</a></li>
+                    <li class="nav__item"><a href="#works">Услуги</a></li>
+                    <li class="nav__item"><a href="#comands">Команда</a></li>
+                    <li class="nav__item"><a href="#review">Отзывы</a></li>
                     <li class="nav__item"><a href="#contacts">Контакты</a></li>
                     <li class="nav__item"><a href="#">Задать вопрос</a></li>
                 </ul>
@@ -104,7 +139,9 @@
             <button class="popup-form-btn-close"><img src="images/close-btn-white.svg" alt=""></button>
         </div>
     </div>
-    <!-- /.popup__overlay -->
+    <!-- /.popup__menu -->
+
+
     
     
     <!-- Подключение Jquery -->
@@ -112,6 +149,8 @@
     <!-- owl -->
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/select2.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,23 +1,12 @@
 window.addEventListener('DOMContentLoaded', function () {
 
-    // слайдер отзывов
-    const sliderReview = $('.review__wrap.owl-carousel');
-    sliderReview.owlCarousel($.extend({}, {
-        nav: false,
-        dots: false,
-        loop: true,
-        margin: 0,
-        items: 1,
-        // autoWidth: true
-    }));
-
     // слайдер компаний
     const sliderCompany = $('.slider-company .owl-carousel');
     sliderCompany.owlCarousel($.extend({}, {
         nav: false,
         dots: false,
         margin: 50,
-        loop: true,
+        loop: false,
         responsive: {
             0: {
                 items: 1,
@@ -81,8 +70,6 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     }
     
-
-
     // табы Команда
     const   tabsComands = document.querySelectorAll('.comands__people-img img'),
             tabsContentComands = document.querySelectorAll('.comands__person'),
@@ -105,6 +92,45 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    //  табы отзывы
+    const   tabsReview = document.querySelectorAll('.owl-item .slider__img'),
+            tabsContentReview = document.querySelectorAll('.review-box'),
+            tabsParentReview = document.querySelector('.slider__wrap');
+
+    function hideTabContentReview() {
+        tabsContentReview.forEach(item => {
+            item.classList.add('review-hide');
+            item.classList.remove('review-show', 'fade');
+        });
+        
+        tabsReview.forEach(item => {
+            item.classList.remove('slider-active');
+        });
+    }
+
+    function showTabContentReview(i = 0) {
+        tabsContentReview[i].classList.add('review-show', 'fade');
+        tabsContentReview[i].classList.remove('review-hide');
+        tabsReview[i].classList.add('slider-active');
+    }         
+
+    if (tabsParentReview != null) {
+        hideTabContentReview();
+        showTabContentReview();
+
+        tabsParentReview.addEventListener('click', (event) => {
+            const target = event.target;
+            
+            if (target && target.classList.contains('slider__img')) {
+                tabsReview.forEach((item, i) => {
+                    if (target == item) {
+                        hideTabContentReview();
+                        showTabContentReview(i);
+                    }
+                });
+            }
+        });
+    }
 
     // табы контакты
     const   tabsContact = document.querySelectorAll('.contacts-city'),
@@ -153,14 +179,17 @@ window.addEventListener('DOMContentLoaded', function () {
 
    	// всплывающее окно
 	const   btnOrder = document.querySelectorAll('.btn-order'),
+	        btnRequest = document.querySelectorAll('.btn-request'),
             popupOverlay = document.querySelector('.popup__overlay'),
+            popupRequest = document.querySelector('.popup__request'),
             menuBtn = document.querySelector('.btn-menu'),
             popupMenu = document.querySelector('.popup__menu'),
             navItem = document.querySelectorAll('.nav__item a');
     
 	btnOrder.forEach(element => {
 		element.addEventListener('click', function () {
-			popupOverlay.style.display = 'block';
+            popupOverlay.style.display = 'block';
+            popupOverlay.classList.add('fade');
 		});
 	});
 
@@ -169,9 +198,24 @@ window.addEventListener('DOMContentLoaded', function () {
 			popupOverlay.style.display = 'none';
 		}
     });
+
+    btnRequest.forEach(element => {
+		element.addEventListener('click', function () {
+            popupRequest.style.display = 'block';
+            popupRequest.classList.add('fade');
+		});
+    });
+
+    popupRequest.addEventListener('click', function (e) {
+		if (e.target === this) {
+			popupRequest.style.display = 'none';
+		}
+    });
+
     // меню
     menuBtn.addEventListener('click', ()=> {
         popupMenu.style.display = 'block';
+        popupMenu.classList.add('fade');
     });
 
 	popupMenu.addEventListener('click', function (e) {
@@ -180,22 +224,43 @@ window.addEventListener('DOMContentLoaded', function () {
 		}
     });
 
-    // Закрытие всплывающих окон
+    // Закрытие всплывающих окон по кнопке
     const closeForm = document.querySelectorAll('.popup-form-btn-close');
     closeForm.forEach(element => {
-        element.addEventListener('click', ()=>{
+        element.addEventListener('click', (event)=>{
+            event.preventDefault();
             popupOverlay.style.display = 'none';
             popupMenu.style.display = 'none';
+            popupRequest.style.display = 'none';
         });
     });
-
+    // закрытие меню по клику на пункт меню
     navItem.forEach(item => {
         item.addEventListener('click', () => {
             popupMenu.style.display = 'none';
         });
     });
 
-// выпадающий список
+// выпадающий списокx
     $('.works__menu_mob').select2();
+
+// wow
+    new WOW().init();
+
+// плавная прокрутка к якорю
+    $('a[href^="#"]').on('click', function(event) {
+        event.preventDefault();
+        var sc = $(this).attr("href"),
+            dn = $(sc).offset().top;
+        /*
+        * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+        * dn - определяем положение блока на странице
+        */
+        $('html, body').animate({scrollTop: dn}, 1000);
+    });
+
+
+
+
 });
         

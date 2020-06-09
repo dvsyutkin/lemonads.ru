@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link href="css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -14,13 +16,16 @@
         <div class="container">
             <div class="header__wrap">
 
-                <div class="header__logo-box">
-                    <a href="#"><img src="images/logo.svg" alt="lemonads"></a>
+                <div class="wow animate__animated animate__slideInLeft header__logo-box">
+                    <a href="index.php"><img src="images/logo.svg" alt="lemonads"></a>
                 </div>
 
-                <div class="header__query">Почему стоит выбрать нас?</div>
+                <div class="wow animate__animated animate__slideInDown header__query">
+                    <a data-fancybox href="https://www.youtube.com/watch?v=mIM3zSBOqUk">Почему стоит выбрать нас?</a>
+                </div>
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/mIM3zSBOqUk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
-                <div class="header__phone-menu">
+                <div class="wow animate__animated animate__slideInRight header__phone-menu">
                     <div class="header__phone-box">
                         <div class="header__city-box">
                             <span class="header__city">Москва</span>
