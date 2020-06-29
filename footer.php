@@ -73,7 +73,7 @@
                 <input class="btn popup__order-input" type="text" name="name" id="" required placeholder="Ваше имя">
                 <input class="btn popup__order-input" type="tel" name="phone" id="" required placeholder="Телефон">
                 <input class="btn popup__order-input" type="email" name="email" id="" required placeholder="Электронная почта">
-                <textarea class="btn popup__order-input popup__order-textarea" name="msg" id="">Ваш комментарий</textarea>
+                <textarea class="btn popup__order-input popup__order-textarea" name="msg" id="">Задайте свой вопрос</textarea>
                 <input type="file" name="file" id="file" class="inputfile"/>
                 <div class="popup__file-box">
                     <img class="file-icon" src="images/file-icon.svg" alt=""><label class="label-file" for="file">Прикрепить файл</label>
@@ -94,11 +94,8 @@
         <div class="popup__order-box">
             <div class="popup__order-title">Заполните форму</div>
             <form action="#" class="popup__order-form">
-                <input class="btn popup__order-input" type="text" name="name" id="" required placeholder="Ваше имя">
-                <input class="btn popup__order-input" type="tel" name="phone" id="" required placeholder="Телефон">
-                <input class="btn popup__order-input" type="email" name="email" id="" required placeholder="Электронная почта">
-                
                 <select class="popup__select" name="" id="">
+                    <option value="">Выберите услугу</option>
                     <option value="Нейминг и логотипы">Нейминг и логотипы</option>
                     <option value="Видеоролик">Видеоролик</option>
                     <option value="Звуковая реклама">Звуковая реклама</option>
@@ -109,6 +106,10 @@
                     <option value="Предметная и Food съёмка">Предметная и Food съёмка</option>
                     <option value="Другое/комплекс услуг">Другое/комплекс услуг</option>
                 </select>
+                <input class="btn popup__order-input" type="text" name="name" id="" required placeholder="Ваше имя">
+                <input class="btn popup__order-input" type="tel" name="phone" id="" required placeholder="Телефон">
+                <input class="btn popup__order-input" type="email" name="email" id="" required placeholder="Электронная почта">
+                
                 <input type="file" name="file" id="file" class="inputfile"/>
                 <div class="popup__file-box">
                     <img class="file-icon" src="images/file-icon.svg" alt=""><label class="label-file" for="file">Прикрепить файл</label>
@@ -124,6 +125,32 @@
         </div>
     </div>
     <!-- /.popup__request -->
+    
+    <!-- оставить отзыв -->
+    <div class="popup__add-review">
+        <div class="popup__order-box">
+            <div class="popup__order-title">Оставить отзыв</div>
+            <form action="#" class="popup__order-form">
+                <input class="btn popup__order-input  popup__order-input_big" type="text" name="name" id="" required placeholder="Ваше имя и фамилия">
+                <input class="btn popup__order-input  popup__order-input_big" type="text" name="company" id="" required placeholder="Название вашей компании">
+                <input class="btn popup__order-input  popup__order-input_big" type="text" name="place" id="" required placeholder="Ваша должность">
+                <textarea class="btn popup__order-input  popup__order-input_big popup__order-textarea" name="msg" id="">Ваш отзыв</textarea>
+                
+                <input type="file" name="file" id="file" class="inputfile" multiple/>
+                <div class="popup__file-box">
+                    <img class="file-icon" src="images/file-icon.svg" alt=""><label class="label-file" for="file">Прикрепить фотографию и логотип  (не обязятельно)</label>
+                </div>
+
+                <button class="btn btn-black btn-submit" type="submit">Отправить</button>
+
+                <p class="popup__text">Нажимая кнопку «Отправить» вы соглашаетесь
+                    <a href="#" class="popup__politic" target="_blank">с политикой сайта по персональным данным.</a></p>
+
+                <button class="popup-form-btn-close"><img src="images/close-btn-black.svg" alt=""></button>
+            </form>
+        </div>
+    </div>
+    <!-- /.popup__add-review -->
 
     <div class="popup__menu">
         <div class="popup__menu-box">
@@ -133,7 +160,7 @@
                     <li class="nav__item"><a href="#comands">Команда</a></li>
                     <li class="nav__item"><a href="#review">Отзывы</a></li>
                     <li class="nav__item"><a href="#contacts">Контакты</a></li>
-                    <li class="nav__item"><a href="#">Задать вопрос</a></li>
+                    <li class="nav__item"><a class="btn-order" href="#">Задать вопрос</a></li>
                 </ul>
             </nav>
             <button class="popup-form-btn-close"><img src="images/close-btn-white.svg" alt=""></button>

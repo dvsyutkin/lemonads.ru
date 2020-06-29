@@ -180,35 +180,51 @@ window.addEventListener('DOMContentLoaded', function () {
    	// всплывающее окно
 	const   btnOrder = document.querySelectorAll('.btn-order'),
 	        btnRequest = document.querySelectorAll('.btn-request'),
+	        btnReview = document.querySelector('.btn-review'),
             popupOverlay = document.querySelector('.popup__overlay'),
             popupRequest = document.querySelector('.popup__request'),
+            popupReview = document.querySelector('.popup__add-review'),
             menuBtn = document.querySelector('.btn-menu'),
             popupMenu = document.querySelector('.popup__menu'),
             navItem = document.querySelectorAll('.nav__item a');
     
 	btnOrder.forEach(element => {
-		element.addEventListener('click', function () {
+		element.addEventListener('click', function() {
             popupOverlay.style.display = 'block';
             popupOverlay.classList.add('fade');
 		});
 	});
 
-	popupOverlay.addEventListener('click', function (e) {
+	popupOverlay.addEventListener('click', function(e) {
 		if (e.target === this) {
 			popupOverlay.style.display = 'none';
 		}
     });
 
     btnRequest.forEach(element => {
-		element.addEventListener('click', function () {
+		element.addEventListener('click', function() {
             popupRequest.style.display = 'block';
             popupRequest.classList.add('fade');
 		});
     });
 
-    popupRequest.addEventListener('click', function (e) {
+    popupRequest.addEventListener('click', function(e) {
 		if (e.target === this) {
 			popupRequest.style.display = 'none';
+		}
+    });
+
+    // добавить отзыв
+    if (btnReview != null) {
+        btnReview.addEventListener('click', function() {
+            popupReview.style.display = 'block';
+            popupReview.classList.add('fade');
+        } );
+    }
+
+    popupReview.addEventListener('click', function(e) {
+		if (e.target === this) {
+			popupReview.style.display = 'none';
 		}
     });
 
@@ -218,7 +234,7 @@ window.addEventListener('DOMContentLoaded', function () {
         popupMenu.classList.add('fade');
     });
 
-	popupMenu.addEventListener('click', function (e) {
+	popupMenu.addEventListener('click', function(e) {
 		if (e.target === this) {
 			popupMenu.style.display = 'none';
 		}
@@ -232,6 +248,7 @@ window.addEventListener('DOMContentLoaded', function () {
             popupOverlay.style.display = 'none';
             popupMenu.style.display = 'none';
             popupRequest.style.display = 'none';
+            popupReview.style.display = 'none';
         });
     });
     // закрытие меню по клику на пункт меню
@@ -248,10 +265,15 @@ window.addEventListener('DOMContentLoaded', function () {
     new WOW().init();
 
 // плавная прокрутка к якорю
+    const   header = document.querySelector('.header'),
+            headerHeight = header.offsetHeight;
+    console.log(headerHeight);
+    
     $('a[href^="#"]').on('click', function(event) {
         event.preventDefault();
         var sc = $(this).attr("href"),
             dn = $(sc).offset().top;
+            dn = dn - headerHeight;
         /*
         * sc - в переменную заносим информацию о том, к какому блоку надо перейти
         * dn - определяем положение блока на странице

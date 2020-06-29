@@ -1,5 +1,5 @@
 .popup
-    &__overlay, &__request
+    &__overlay, &__request, &__add-review
         display: none
         z-index: 9999
         position: fixed
@@ -31,9 +31,10 @@
         &-form
             display: flex
             flex-direction: column
-
         &-input
             margin-bottom: 4.8rem
+            padding: 16px 30px
+            min-width: 450px
             +robR
             font-size: 2.4rem
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
@@ -43,7 +44,10 @@
             border-radius: 5px
             &::placeholder
                 color: #434343
+            &_big
+                min-width: 600px
         &-textarea
+            height: 150px
             color: #434343
         &-files
             width: 0.1px
@@ -77,8 +81,13 @@
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
         background: #E5E5E5
         text-align: center
+        text-align-last: center
         color: #434343
         border-radius: 5px
+        border: none
+        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd
+        -webkit-appearance: none
+        background-position-x: 380px
 
 .inputfile
 	width: 0.1px
@@ -97,5 +106,10 @@
     cursor: pointer
 
 @media (max-width: 600px)
-    .popup__order-box
-        padding: 3.5rem
+    .popup__order
+        &-box
+            padding: 3.5rem
+        &-input
+            min-width: 280px
+            &_big
+                min-width: 280px

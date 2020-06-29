@@ -9,53 +9,75 @@
                 <div class="hero__wrap">
 
                     <div class="hero__box">
-                        <div class="hero__box-img">
-                            <img src="images/hero-1.svg" alt="">
-                        </div>
-                        <p class="hero__text">Логотип/<br>нейминг</p>
-                    </div>
-                    <div class="hero__box">
-                        <div class="hero__box-img">
-                            <img src="images/hero-2.svg" alt="">
-                        </div>
-                        <p class="hero__text">Видеоролик</p>
-                    </div>
-                    <div class="hero__box">
-                        <div class="hero__box-img">
-                            <img src="images/hero-3.svg" alt="">
-                        </div>
-                        <p class="hero__text">Звуковая реклама</p>
-                    </div>
-                    <div class="hero__box">
-                        <div class="hero__box-img">
-                            <img src="images/hero-4.svg" alt="">
-                        </div>
-                        <p class="hero__text">Сайт/<br>продвижение</p>
+                        <a href="#naming-logos">
+                            <div class="hero__box-img">
+                                <img src="images/hero-1.svg" alt="">
+                            </div>
+                            <p class="hero__text">Логотип/<br>нейминг</p>
+                        </a>
                     </div>
 
                     <div class="hero__box">
-                        <div class="hero__box-img">
-                            <img src="images/hero-5.svg" alt="">
-                        </div>
-                        <p class="hero__text">SMM</p>
+                        <a href="#video-clip">
+                            <div class="hero__box-img">
+                                <img src="images/hero-2.svg" alt="">
+                            </div>
+                            <p class="hero__text">Видеоролик</p>
+                        </a>
                     </div>
+
                     <div class="hero__box">
-                        <div class="hero__box-img">
-                            <img src="images/hero-6.svg" alt="">
-                        </div>
-                        <p class="hero__text">Реклама</p>
+                        <a href="#sound-advertising">
+                            <div class="hero__box-img">
+                                <img src="images/hero-3.svg" alt="">
+                            </div>
+                            <p class="hero__text">Звуковая реклама</p>
+                        </a>
                     </div>
+
                     <div class="hero__box">
-                        <div class="hero__box-img">
-                            <img src="images/hero-7.svg" alt="">
-                        </div>
-                        <p class="hero__text">Этикетка/<br>упаковка</p>
+                        <a href="#site-seo">
+                            <div class="hero__box-img">
+                                <img src="images/hero-4.svg" alt="">
+                            </div>
+                            <p class="hero__text">Сайт/<br>продвижение</p>
+                        </a>
                     </div>
+
                     <div class="hero__box">
-                        <div class="hero__box-img">
-                            <img src="images/hero-8.svg" alt="">
-                        </div>
-                        <p class="hero__text">Food и предметная<br>фото-видео съемка</p>
+                        <a href="#smm">
+                            <div class="hero__box-img">
+                                <img src="images/hero-5.svg" alt="">
+                            </div>
+                            <p class="hero__text">SMM</p>
+                        </a>
+                    </div>
+
+                    <div class="hero__box">
+                        <a href="#design">
+                            <div class="hero__box-img">
+                                <img src="images/hero-6.svg" alt="">
+                            </div>
+                            <p class="hero__text">Реклама</p>
+                        </a>
+                    </div>
+
+                    <div class="hero__box">
+                        <a href="#label">
+                            <div class="hero__box-img">
+                                <img src="images/hero-7.svg" alt="">
+                            </div>
+                            <p class="hero__text">Этикетка/<br>упаковка</p>
+                        </a>
+                    </div>
+
+                    <div class="hero__box">
+                        <a href="#food-shooting">
+                            <div class="hero__box-img">
+                                <img src="images/hero-8.svg" alt="">
+                            </div>
+                            <p class="hero__text">Food и предметная<br>фото-видео съемка</p>
+                        </a>
                     </div>
 
 
@@ -420,7 +442,7 @@
 
         <section class="section review" id="review">
             <div class="container">
-                <button class="wow animate__animated animate__zoomIn review-btn">Оставить отзыв</button>
+                <button class="wow animate__animated animate__zoomIn review-btn btn-review">Оставить отзыв</button>
                 <div class="clear"></div>
                 <h2 class="wow animate__animated animate__fadeInUp section__title section__title_center">Отзывы</h2>
                 <div class="wow animate__animated animate__slideInUp review__wrap">
@@ -655,8 +677,8 @@
          <!-- /.slider-company -->
 
         <section class="section contacts" id="contacts">
-            <!-- <div class="contacts__map">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0bb9645e91fe075a3d4189ee9a69dc79287d933a042c766264206d1672869258&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script> -->
+            <div class="contacts__map">
+                <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5e7640f10f79e95fbf9b2409373b42288d5433038926036763867e5082e75a49&amp;width=100%25&amp;lang=ru_RU&amp;scroll=true"></script> -->
             </div>
             <div class="container">
                 <h2 class="wow animate__animated animate__fadeInUp section__title section__title_center">Контакты</h2>
